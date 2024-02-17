@@ -22,21 +22,3 @@ eigenvalor, eigenvector = metodo_potencia_simetrico(matriz_simetrica, iteracione
 print("Eigenvalor aproximado mas grande: ", eigenvalor)
 print("Eigenvector correspondiente aproximado: ", eigenvector)
 
-
-
-
-
-#Ejercicio 2
-
-from scipy.interpolate import InterpolatedUnivariateSpline
-
-def spline_interpolation(x, y):
-    spline = InterpolatedUnivariateSpline(x, y, k=3)
-    return spline
-
-x = np.array([0, 1, 2, 4.1, 5])
-y = np.array([1, -1, 1, -1, 1])
-
-spline = spline_interpolation(x, y)
-
-print(spline(3)) 
